@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   
-  width: 100%;
+  width: 40.0rem;
   padding: 12px;
 
   background-color: #fff;
@@ -16,5 +16,7 @@ export const Container = styled.div`
     line-height: normal;
     padding: 5px 0px 10px 5px;
   }
+
+ 
 
 `;

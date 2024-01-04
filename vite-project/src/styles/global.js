@@ -12,6 +12,7 @@ export default createGlobalStyle`
   :root{
     font-size: 62.5%;
     overflow-x: hidden;
+
     ::-webkit-scrollbar {
     width: 3px; 
     }
@@ -26,7 +27,7 @@ export default createGlobalStyle`
     }
 
     @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
-      
+
     }
 
   }
