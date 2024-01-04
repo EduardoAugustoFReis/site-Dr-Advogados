@@ -5,15 +5,8 @@ import {DEVICE_BREAKPOINTS} from "../../styles/layoutBreakpoints"
 
 export const Container = styled.div`
   
-  width: 100dvw;
+  width: 100%;
   height: 100vh;
-
-  display: grid;
-  
-  grid-template-areas: 
-  "header"
-  "content"
-  "footer";
 
   .whatsapp-fixed{
     position: fixed;
@@ -37,15 +30,10 @@ export const Container = styled.div`
 
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINTS.SM} ){
-   
-  }
-
 `;
 
 export const Header = styled.div`
-  grid-area: header;
-
+  
   background: url(${backgroundImg}) no-repeat center center;
   background-size: cover;
   text-align: center;
@@ -76,13 +64,25 @@ export const Header = styled.div`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINTS.SM} ){
+   padding: 10px;
 
+  >h1{
+    font-size: 2.6rem;
+  }
+
+  >h2{
+    font-size: 1.8rem;
+  }
+  
+  >p{
+    font-size: 1.6rem;
+  }
   }
 
 `;
 
 export const Content = styled.div`
-  grid-area: content;
+  
 
   background-color: #EFEDDC;
 
@@ -109,22 +109,24 @@ export const Content = styled.div`
   .information_cards_first_line{
     display: flex;
     justify-content: center;
-    gap: 1.0rem;
-    padding-bottom: 1.0rem;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   
   .information_cards_second_line{
     display: flex;
     justify-content: center;
-    gap: 1.0rem;
+    gap: 1.5rem;
     padding-bottom: 1.0rem;
   }
 
   .attorneys-cards{
     display: flex;
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
-    gap: 5.0rem;
+    gap: 1.0rem;
+
     padding-top: 1.0rem;
     padding-bottom: 2.0rem;
   }
@@ -132,15 +134,15 @@ export const Content = styled.div`
   .first-card-attorney, .second-card-attorney{
 
     display: flex;
+    flex: 1; 
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    
-    background-color: #F2F2F2;
+
+    background-color: #f2f2f2;
 
     border: none;
     border-radius: 1.0rem;
-
     padding: 1.2rem;
 
     >img{
@@ -162,7 +164,24 @@ export const Content = styled.div`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINTS.SM} ){    
-  
+    
+    .first-card-attorney, .second-card-attorney, .attorneys-cards, .information_cards_first_line, .information_cards_second_line{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    >h2{
+      font-size: 2.0rem;
+    }
+
+    >h3{
+      font-size: 1.8rem;
+    }
+
+    >p{
+      font-size: 1.6rem;
+    }
 
   }
 
@@ -179,12 +198,15 @@ export const CardsAttorney = styled.div`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+    
+    >p{
+      font-size: 1.6rem;
+    }
 
   }
 `;
 
 export const Footer = styled.div`
-  grid-area: footer;
   
   padding: 5px;
 
@@ -213,7 +235,12 @@ export const Footer = styled.div`
   } 
 
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
-   
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
   }
 
 `;
