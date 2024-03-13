@@ -46,7 +46,7 @@ export const Header = styled.div`
   }
 
   >h2{
-    color: red;
+    color:	#fff;
     font-size: 3.0rem;
   }
   
